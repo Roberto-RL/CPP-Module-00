@@ -6,7 +6,7 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:56:16 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/19 13:47:47 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/05/26 14:04:06 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void Contact::head_table()
 }
 void Contact::display()
 {
-	std::cout << "|" << std::setw(10) << this->index;
+	std::cout << "|" << std::setw(10) << this->index + 1;
 	if(this->first_name.length() > 10)
 		std::cout << "|" << this->first_name.substr(0, 9) << ".";
 	else
@@ -48,21 +48,11 @@ void Contact::display()
 	std::cout << "|" << std::endl;
 	std::cout << " -------------------------------------------" << std::endl;
 }
-void Contact::search_index(int len)
+void Contact::display_information()
 {
-	std::string	str_index;
-
-	if (len != 0)
-	{
-		std::cout << "enter a index" << std::endl;
-		std::getline(std::cin, str_index);
-		int str = atoi(str_index.c_str());
-		for(int i = 0; i < len; i++)
-		{
-			if (str == this->index)
-				phonebook.display_contact(i);
-		}
-	}
-	else
-		std::cout << "phonebook is empty" << std::endl;
+	std::cout << "first_name: " << this->first_name << std::endl;
+	std::cout << "last_name: " << this->last_name << std::endl;
+	std::cout << "nickname: " << this->nickname << std::endl;
+	std::cout << "phone: " << this->phone << std::endl;
+	std::cout << "darkest secret: " << this->secret << std::endl;
 }

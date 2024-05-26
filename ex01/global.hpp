@@ -6,7 +6,7 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:08:50 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/19 13:47:28 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/05/26 13:42:59 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 		std::string lastName, std::string nickname, std::string phone, std::string secret);
 	void	head_table();
 	void	display();
-	void	search_index(int len);
+	void	display_information();
 private:
 	//	Atributos
 	int			index;

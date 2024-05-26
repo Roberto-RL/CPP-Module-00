@@ -6,7 +6,7 @@
 /*   By: rrimonte <rrimonte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:24:17 by rrimonte          #+#    #+#             */
-/*   Updated: 2024/05/19 13:43:03 by rrimonte         ###   ########.fr       */
+/*   Updated: 2024/05/26 14:03:56 by rrimonte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void	PhoneBook::get_contact_info(int count)
 	}
 	while(valid)
 	{
-		std::cout << "Enter a secret" << std::endl;
+		std::cout << "Enter a darkest secret" << std::endl;
 		std::getline(std::cin, secret);
 		if(!secret.empty())
 			break;
-		std::cout << "Secret is empty" << std::endl;
+		std::cout << "Darkest secret is empty" << std::endl;
 	}
 	this->arraycontact[count].add_contact(count, first_name, 
 		last_name, nickname, phone_number, secret);
@@ -77,5 +77,5 @@ void	PhoneBook::display_all_contacts(int len)
 
 void	PhoneBook::display_contact(int i)
 {
-	this->arraycontact[i].display();
+		this->arraycontact[i].display_information();
 }
